@@ -8,8 +8,62 @@
 <body>
 <main>
     <h1>Найди себе друга!</h1>
-
-    <!--Форму размещай тут-->
+    <form action="/pets/orders" method="post">
+        <label>
+            Тип животного
+            <select name="petType">
+                <option value="cat">Кошка</option>
+                <option value="dog">Собака</option>
+                <option value="tiger">Тигр</option>
+            </select>
+        </label><br/>
+        Пол<br/>
+        <label>
+            <input name="gender" type="radio" value="boy" checked>Мальчик<br/>
+        </label>
+        <label>
+            <input name="gender" type="radio" value="girl">Девочка<br/>
+        </label>
+        <label>
+            <input name="gender" type="radio" value="none">Не известно<br/>
+        </label>
+        Цвет глаз
+        <select name="eyeColor">
+            <option value="#0000FF">Синий</option>
+            <option value="#008000">Зелёный</option>
+            <option value="#964B00">Карий</option>
+        </select><br/>
+        <label>
+            Длина хвоста<br/>
+            7<input type="range" name="tailLength" min="7" max="120">120
+        </label><br/>
+        <label>
+            Имя хозяина<br/>
+            <input type="text" name="name" required minlength="3" maxlength="50" placeholder="Олег">
+        </label><br/>
+        <label>
+            Дата рождения<br/>
+            <input name="dateOfBirth" type="date" required>
+        </label><br/>
+        <label>
+            email<br/>
+            <input name="email" type="email" required placeholder="example@xxx.com">
+        </label><br/>
+        <label>
+            Телефон<br/>
+            <input name="phone" type="tel" required placeholder="+7 (***) ***-**-**">
+        </label><br/>
+        <label>
+            <input name="rules" value="true" type="checkbox" required>
+            Я согласен с обработкой моих персональных данных
+        </label><br/>
+        <label>
+            <input type="submit" value="Подтвердить">
+        </label>
+        <label>
+            <input type="reset" value="Сбросить">
+        </label>
+    </form>
 
 </main>
 </body>
